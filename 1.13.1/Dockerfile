@@ -128,9 +128,7 @@ RUN set -x && \
         /var/tmp/* \
         /var/lib/apt/lists/*
 
-COPY a-records.conf /opt/unbound/etc/unbound/
-COPY forward-records.conf /opt/unbound/etc/unbound/
-COPY srv-records.conf /opt/unbound/etc/unbound/
+COPY *.conf /opt/unbound/etc/unbound/
 COPY unbound.sh /
 
 RUN chmod +x /unbound.sh
